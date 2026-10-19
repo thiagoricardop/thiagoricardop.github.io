@@ -1,0 +1,13 @@
+[33m37bb9d7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m docs: add README and license
+[33m7ffeb51[m ci: build, type-check and deploy to GitHub Pages
+[33m81fae3d[m docs: add downloadable résumé (PDF)
+[33me54d567[m feat: assemble home page and custom 404 page
+[33md1cbe55[m feat: add experience timeline, skills, education and contact sections
+[33m8bcb62a[m feat: add projects section with featured card, previews and repository links
+[33me7b6996[m feat: add live previews for CAN IDS output, VMU architecture and P300 speller
+[33m58b57c9[m feat: add hero with work authorization, key stats and about section
+[33me58317a[m feat: add sticky header with mobile menu and theme toggle, footer and section wrapper
+[33m98e8eef[m feat: add base layout with SEO meta, Open Graph, JSON-LD and theme bootstrap
+[33macd7ae9[m style: add global styles, light/dark theme tokens and icon set
+[33ma73cd3e[m feat: add typed site content and project preview images
+[33m7008844[m chore: scaffold Astro 7 project with Tailwind CSS v4, sitemap and Prettier

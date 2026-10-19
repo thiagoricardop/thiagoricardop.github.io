@@ -2,6 +2,7 @@
 import type { ImageMetadata } from 'astro';
 import sshClusters from '../assets/previews/ssh-clusters.png';
 import posixDashboard from '../assets/previews/posix-dashboard.png';
+import p300Preview from '../components/previews/P300_preview.png';
 
 export const site = {
   url: 'https://thiagoricardop.github.io',
@@ -47,7 +48,6 @@ export const stats = [
 export type ProjectPreview =
   | { type: 'can-terminal' }
   | { type: 'vmu-diagram' }
-  | { type: 'speller-grid' }
   | { type: 'image'; src: ImageMetadata; alt: string };
 
 export interface Project {
@@ -142,8 +142,12 @@ export const projects: Project[] = [
     ],
     stack: ['Python', 'Tkinter', 'Lab Streaming Layer', 'EEG'],
     repo: 'https://github.com/thiagoricardop/P300-Speller-Interface',
-    preview: { type: 'speller-grid' },
-    previewLabel: 'Interface',
+    preview: {
+      type: 'image',
+      src: p300Preview,
+      alt: 'P300 Speller interface showing the character grid during a training session',
+    },
+    previewLabel: 'P300 interface',
   },
 ];
 

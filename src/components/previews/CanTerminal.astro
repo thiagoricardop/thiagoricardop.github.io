@@ -1,23 +1,12 @@
 ---
 // Captured from `can-sniffer demo --dbc dbc/sample.dbc --attack` (abridged).
 const lines = [
-  { kind: 'cmd', text: '$ can-sniffer demo --dbc dbc/sample.dbc --attack' },
-  {
-    kind: 'frame',
-    text: "[1791268011.543] 0x100 (8) EngineData {'EngineRPM': 800.0, 'EngineTemp': 90.0, 'ThrottlePos': 20.0}",
-  },
-  { kind: 'frame', text: "[1791268011.543] 0x200 (8) VehicleSpeed {'Speed': 50.0}" },
-  {
-    kind: 'frame',
-    text: "[1791268011.563] 0x100 (8) EngineData {'EngineRPM': 801.0, 'EngineTemp': 90.0, 'ThrottlePos': 20.0}",
-  },
-  { kind: 'frame', text: "[1791268011.563] 0x200 (8) VehicleSpeed {'Speed': 50.0}" },
-  { kind: 'unknown', text: '[1791268011.866] 0x666 (8) UNKNOWN {}' },
-  {
-    kind: 'alert',
-    text: '[1791268011.866] ALERT UNKNOWN_ID 0x666: Arbitration ID 0x666 not in allowlist',
-  },
-  { kind: 'alert', text: '[1791268011.866] ALERT FLOOD 0x666: 79 frames in 1.0s window' },
+  { kind: 'cmd', text: '$ can-sniffer demo --attack' },
+  { kind: 'frame', text: '0x100 EngineData  RPM=800  Temp=90°C  Throttle=20%' },
+  { kind: 'frame', text: '0x200 VehicleSpeed  Speed=50 km/h' },
+  { kind: 'unknown', text: '0x666 UNKNOWN  {}' },
+  { kind: 'alert', text: 'ALERT UNKNOWN_ID  0x666 not in allowlist' },
+  { kind: 'alert', text: 'ALERT FLOOD  79 frames / 1.0s' },
 ];
 
 const colors: Record<string, string> = {
@@ -28,12 +17,12 @@ const colors: Record<string, string> = {
 };
 ---
 
-<div class="flex h-full flex-col bg-slate-950 font-mono text-[11px] leading-relaxed sm:text-xs">
-  <div class="flex items-center gap-1.5 border-b border-slate-800 px-4 py-2.5">
+<div class="flex h-full min-h-0 flex-col bg-slate-950 font-mono text-[10px] leading-relaxed sm:text-xs">
+  <div class="flex shrink-0 items-center gap-1.5 border-b border-slate-800 px-3 py-2 sm:px-4 sm:py-2.5">
     <span class="size-2.5 rounded-full bg-rose-500/80"></span>
     <span class="size-2.5 rounded-full bg-amber-400/80"></span>
     <span class="size-2.5 rounded-full bg-emerald-500/80"></span>
     <span class="ml-3 text-slate-500">can-sniffer · virtual CAN bus</span>
   </div>
-  <pre class="flex-1 overflow-hidden px-4 py-3 whitespace-pre">{lines.map((line) => <span class:list={['block', colors[line.kind]]}>{line.text}</span>)}</pre>
+  <pre class="min-h-0 flex-1 overflow-auto px-3 py-2 whitespace-pre-wrap break-all sm:px-4 sm:py-3">{lines.map((line) => <span class:list={['block', colors[line.kind]]}>{line.text}</span>)}</pre>
 </div>

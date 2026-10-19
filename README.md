@@ -39,7 +39,8 @@ markup.
 
 - **Add a project:** append an entry to `projects`. For the preview, use `{ type: 'image', src, alt }`
   with an image in `src/assets/previews/`, or one of the built-in previews (`can-terminal`,
-  `vmu-diagram`, `speller-grid`).
+  `vmu-diagram`). The P300 project uses its interface screenshot from
+  `src/components/previews/P300_preview.png`.
 - **Update the résumé:** replace `public/Thiago_Ricardo_Resume.pdf` (keep the file name).
 - **Skills:** `handsOn` lists skills used in work or public projects; `coursework` lists skills from
   graduate training. They render with different styles.
