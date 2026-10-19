@@ -1,0 +1,39 @@
+---
+const modules = [
+  { name: 'EV module', detail: 'e-motor' },
+  { name: 'ICE module', detail: 'engine' },
+];
+const tooling = ['make test', 'LCOV', 'Cppcheck', 'Docker'];
+---
+
+<div class="flex h-full flex-col items-center justify-center bg-slate-50 p-6 font-mono text-xs dark:bg-slate-950">
+  <div class="rounded-lg border-2 border-cyan-500 bg-white px-5 py-3 text-center shadow-sm dark:bg-slate-900">
+    <p class="text-sm font-semibold text-slate-900 dark:text-white">VMU</p>
+    <p class="text-slate-500">vehicle management unit</p>
+  </div>
+
+  <div class="h-5 w-px bg-slate-400 dark:bg-slate-600" aria-hidden="true"></div>
+  <div class="w-64 sm:w-72">
+    <div class="mx-auto h-px w-1/2 bg-slate-400 dark:bg-slate-600" aria-hidden="true"></div>
+    <div class="grid grid-cols-2">
+      {modules.map((module) => (
+        <div class="flex flex-col items-center">
+          <div class="h-5 w-px bg-slate-400 dark:bg-slate-600" aria-hidden="true" />
+          <div class="rounded-lg border border-slate-300 bg-white px-3 py-2 text-center dark:border-slate-700 dark:bg-slate-900">
+            <p class="font-semibold text-slate-900 dark:text-white">{module.name}</p>
+            <p class="text-slate-500">{module.detail}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+  <p class="mt-3 text-slate-500">commands + shared data · SIGINT/SIGTERM shutdown</p>
+
+  <ul class="mt-5 flex flex-wrap justify-center gap-2">
+    {tooling.map((tool) => (
+      <li class="rounded-md bg-emerald-100 px-2 py-0.5 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
+        ✓ {tool}
+      </li>
+    ))}
+  </ul>
+</div>
