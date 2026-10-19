@@ -1,0 +1,34 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import Section from './Section.astro';
+import { person, projects } from '../data/profile';
+
+const [featured, ...others] = projects;
+---
+
+<Section
+  id="projects"
+  eyebrow="02 · Projects"
+  title="Selected work"
+  intro="Security, embedded and automotive projects with public source code. Each one is built, tested and documented so you can run it yourself."
+>
+  <div class="space-y-8">
+    <ProjectCard project={featured} featured />
+    <div class="grid gap-8 md:grid-cols-2">
+      {others.map((project) => (
+        <ProjectCard project={project} />
+      ))}
+    </div>
+  </div>
+  <p class="mt-10 text-center">
+    More on
+    <a
+      href={person.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="font-medium text-cyan-700 underline-offset-4 hover:underline dark:text-cyan-400"
+    >
+      github.com/thiagoricardop
+    </a>
+  </p>
+</Section>
