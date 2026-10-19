@@ -1,0 +1,24 @@
+---
+import { person, site } from '../data/profile';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-slate-200 dark:border-slate-800">
+  <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-8 text-sm text-slate-500 sm:flex-row dark:text-slate-400">
+    <p>
+      © {year} {person.name}
+    </p>
+    <p>
+      Built with Astro and Tailwind CSS ·
+      <a
+        href={site.repo}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="underline-offset-4 hover:text-slate-900 hover:underline dark:hover:text-white"
+      >
+        Source
+      </a>
+    </p>
+  </div>
+</footer>
