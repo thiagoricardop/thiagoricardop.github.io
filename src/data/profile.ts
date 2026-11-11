@@ -37,8 +37,7 @@ export const about = [
 
   'Camp had become more than a summer job. I met my future wife there, and our relationship grew over the years. She joined the staff in 2026; that summer, we married. Our plans changed in the happiest way, and I moved to Santa Cruz to begin our life together. I now have U.S. work authorization while my permanent-residency process continues.',
 
-  'Santa Cruz is home now. Alongside my studies, I am building practical automotive-security projects, including a CAN bus sniffer and intrusion-detection demo and a multi-process C hybrid-vehicle simulation. My path has not been straight, but its direction is clear: understand how things work, make them more dependable, and help people grow. I am grateful for the places and people that brought me here, and curious about what comes next.'
-
+  'Santa Cruz is home now. Alongside my studies, I am building practical automotive-security projects, including a CAN bus sniffer and intrusion-detection demo and a multi-process C hybrid-vehicle simulation. My path has not been straight, but its direction is clear: understand how things work, make them more dependable, and help people grow. I am grateful for the places and people that brought me here, and curious about what comes next.',
 ];
 
 export const focusAreas = [
@@ -48,9 +47,7 @@ export const focusAreas = [
   'Test automation and CI for embedded code',
 ];
 
-export const stats = [
-  
-];
+export const stats: { value: string; label: string }[] = [];
 
 export type ProjectPreview =
   | { type: 'can-terminal' }
