@@ -27,8 +27,18 @@ export const person = {
 };
 
 export const about = [
-  'I am an embedded and automotive cybersecurity engineer currently completing an M.Sc. in Cybersecurity Engineering at Politecnico di Torino. My background is in Electrical Engineering with a Computer Science emphasis, followed by a postgraduate residency in Automotive Software Development where I studied ECU architecture, in-vehicle networks (CAN, LIN, FlexRay, Automotive Ethernet), AUTOSAR, ISO 26262 and real-time operating systems.',
-  'I like turning that theory into working, tested code: a CAN sniffer with a rule-based intrusion-detection layer, a multi-process vehicle management unit written in C, and POSIX vehicle simulators running on a Raspberry Pi test rig. Before moving into security, I shipped a supercomputer data-visualization tool, accelerated a light-rail design stage by 50% and delivered 200+ photovoltaic plant projects.',
+  'I grew up in Brazil in a family of farmers and entrepreneurs, where practical work meant noticing what needed doing and finding a way forward. That instinct still guides me: I like understanding how systems work, making them useful, and helping the people around me grow more capable.',
+
+  'At the Federal University of Minas Gerais, I studied Electrical Engineering with an emphasis on Computer Science. An exchange in the Czech Republic introduced me to cybersecurity and information systems; I also joined IT4Innovations National Supercomputing Center as a junior software developer. I built a Python interface for visualizing data from the Karolina and Barbora supercomputers, and saw how thoughtful software can make complex systems easier to use. I returned to Brazil to complete my degree.',
+
+  'In summer 2024, I joined YMCA Camp Whittle in California as a counselor. That fall I began UFPE’s remote postgraduate program in Automotive Software Development, studying embedded systems, vehicle networks, real-time operating systems, testing, and automotive standards. A week of immersion in Pernambuco, including a visit to the university and Stellantis factory, connected the coursework to the people and processes behind a modern vehicle. Securing connected cars became a problem I wanted to help solve.',
+
+  'I returned to camp in 2025, and after starting my M.Sc. in Cybersecurity Engineering at Politecnico di Torino, came back in 2026 as sports coordinator and bike mechanic. I planned schedules, managed equipment, taught activities, and coached staff in routine bike maintenance. Watching the team become more confident was deeply rewarding. I continue my master’s coursework remotely and will return to Italy for in-person exams when I am able to travel.',
+
+  'Camp had become more than a summer job. I met my future wife there, and our relationship grew over the years. She joined the staff in 2026; that summer, we married. Our plans changed in the happiest way, and I moved to Santa Cruz to begin our life together. I now have U.S. work authorization while my permanent-residency process continues.',
+
+  'Santa Cruz is home now. Alongside my studies, I am building practical automotive-security projects, including a CAN bus sniffer and intrusion-detection demo and a multi-process C hybrid-vehicle simulation. My path has not been straight, but its direction is clear: understand how things work, make them more dependable, and help people grow. I am grateful for the places and people that brought me here, and curious about what comes next.'
+
 ];
 
 export const focusAreas = [
@@ -39,10 +49,7 @@ export const focusAreas = [
 ];
 
 export const stats = [
-  { value: '230k', label: 'SSH attack sessions analyzed with ML' },
-  { value: '200+', label: 'Photovoltaic plant projects delivered' },
-  { value: '50%', label: 'Faster design stage at SYSTRA' },
-  { value: '95%+', label: 'User approval of my HPC data tool' },
+  
 ];
 
 export type ProjectPreview =
